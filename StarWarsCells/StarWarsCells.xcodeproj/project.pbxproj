@@ -15,6 +15,11 @@
 		41AD7D3B1CDA841A008E5D3E /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 41AD7D3A1CDA841A008E5D3E /* characters.json */; };
 		41AD7D3E1CDA90D5008E5D3E /* CharactersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AD7D3D1CDA90D5008E5D3E /* CharactersTableViewController.m */; };
 		41AD7D411CDA9196008E5D3E /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AD7D401CDA9196008E5D3E /* Character.m */; };
+		41AD7D441CDA99B1008E5D3E /* ResistanceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AD7D431CDA99B1008E5D3E /* ResistanceTableViewCell.m */; };
+		41AD7D471CDAA0D0008E5D3E /* JediTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AD7D461CDAA0D0008E5D3E /* JediTableViewCell.m */; };
+		41AD7D4A1CDAA219008E5D3E /* NewOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AD7D491CDAA219008E5D3E /* NewOrderTableViewCell.m */; };
+		41AD7D4D1CDAA223008E5D3E /* EmpireTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AD7D4C1CDAA223008E5D3E /* EmpireTableViewCell.m */; };
+		41AD7D501CDAA230008E5D3E /* BountyHunterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AD7D4F1CDAA230008E5D3E /* BountyHunterTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,16 @@
 		41AD7D3D1CDA90D5008E5D3E /* CharactersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharactersTableViewController.m; sourceTree = "<group>"; };
 		41AD7D3F1CDA9196008E5D3E /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
 		41AD7D401CDA9196008E5D3E /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
+		41AD7D421CDA99B1008E5D3E /* ResistanceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResistanceTableViewCell.h; sourceTree = "<group>"; };
+		41AD7D431CDA99B1008E5D3E /* ResistanceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResistanceTableViewCell.m; sourceTree = "<group>"; };
+		41AD7D451CDAA0CF008E5D3E /* JediTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JediTableViewCell.h; sourceTree = "<group>"; };
+		41AD7D461CDAA0D0008E5D3E /* JediTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JediTableViewCell.m; sourceTree = "<group>"; };
+		41AD7D481CDAA219008E5D3E /* NewOrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewOrderTableViewCell.h; sourceTree = "<group>"; };
+		41AD7D491CDAA219008E5D3E /* NewOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewOrderTableViewCell.m; sourceTree = "<group>"; };
+		41AD7D4B1CDAA223008E5D3E /* EmpireTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmpireTableViewCell.h; sourceTree = "<group>"; };
+		41AD7D4C1CDAA223008E5D3E /* EmpireTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmpireTableViewCell.m; sourceTree = "<group>"; };
+		41AD7D4E1CDAA22F008E5D3E /* BountyHunterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BountyHunterTableViewCell.h; sourceTree = "<group>"; };
+		41AD7D4F1CDAA230008E5D3E /* BountyHunterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BountyHunterTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +85,16 @@
 				41AD7D401CDA9196008E5D3E /* Character.m */,
 				41AD7D3C1CDA90D5008E5D3E /* CharactersTableViewController.h */,
 				41AD7D3D1CDA90D5008E5D3E /* CharactersTableViewController.m */,
+				41AD7D421CDA99B1008E5D3E /* ResistanceTableViewCell.h */,
+				41AD7D431CDA99B1008E5D3E /* ResistanceTableViewCell.m */,
+				41AD7D451CDAA0CF008E5D3E /* JediTableViewCell.h */,
+				41AD7D461CDAA0D0008E5D3E /* JediTableViewCell.m */,
+				41AD7D481CDAA219008E5D3E /* NewOrderTableViewCell.h */,
+				41AD7D491CDAA219008E5D3E /* NewOrderTableViewCell.m */,
+				41AD7D4B1CDAA223008E5D3E /* EmpireTableViewCell.h */,
+				41AD7D4C1CDAA223008E5D3E /* EmpireTableViewCell.m */,
+				41AD7D4E1CDAA22F008E5D3E /* BountyHunterTableViewCell.h */,
+				41AD7D4F1CDAA230008E5D3E /* BountyHunterTableViewCell.m */,
 				41AD7D2C1CDA7DB9008E5D3E /* Main.storyboard */,
 				41AD7D2F1CDA7DB9008E5D3E /* Assets.xcassets */,
 				41AD7D311CDA7DB9008E5D3E /* LaunchScreen.storyboard */,
@@ -159,10 +184,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41AD7D441CDA99B1008E5D3E /* ResistanceTableViewCell.m in Sources */,
+				41AD7D4A1CDAA219008E5D3E /* NewOrderTableViewCell.m in Sources */,
 				41AD7D3E1CDA90D5008E5D3E /* CharactersTableViewController.m in Sources */,
 				41AD7D281CDA7DB9008E5D3E /* AppDelegate.m in Sources */,
 				41AD7D251CDA7DB9008E5D3E /* main.m in Sources */,
+				41AD7D4D1CDAA223008E5D3E /* EmpireTableViewCell.m in Sources */,
 				41AD7D411CDA9196008E5D3E /* Character.m in Sources */,
+				41AD7D471CDAA0D0008E5D3E /* JediTableViewCell.m in Sources */,
+				41AD7D501CDAA230008E5D3E /* BountyHunterTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

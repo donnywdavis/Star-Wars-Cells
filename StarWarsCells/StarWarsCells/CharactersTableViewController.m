@@ -8,6 +8,11 @@
 
 #import "CharactersTableViewController.h"
 #import "Character.h"
+#import "ResistanceTableViewCell.h"
+#import "JediTableViewCell.h"
+#import "NewOrderTableViewCell.h"
+#import "EmpireTableViewCell.h"
+#import "BountyHunterTableViewCell.h"
 
 @interface CharactersTableViewController ()
 
@@ -62,12 +67,48 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CharacterCell" forIndexPath:indexPath];
-    
     Character *aCharacter = self.characters[indexPath.row];
+    
+    if ([aCharacter.affiliation isEqualToString:@"Resistance"]) {
+        ResistanceTableViewCell *resistanceCell = (ResistanceTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"ResistanceCell" forIndexPath:indexPath];
+        resistanceCell.nameLabel.text = aCharacter.name;
+        resistanceCell.descriptionLabel.text = aCharacter.shortDescription;
+        return resistanceCell;
+        
+    } else if ([aCharacter.affiliation isEqualToString:@"Jedi Order"]) {
+        JediTableViewCell *jediCell = (JediTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"JediCell" forIndexPath:indexPath];
+        jediCell.nameLabel.text = aCharacter.name;
+        jediCell.descriptionLabel.text = aCharacter.shortDescription;
+        return jediCell;
+        
+    } else if ([aCharacter.affiliation isEqualToString:@"New Order"]) {
+        NewOrderTableViewCell *newOrderCell = (NewOrderTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"NewOrderCell" forIndexPath:indexPath];
+        newOrderCell.nameLabel.text = aCharacter.name;
+        newOrderCell.descriptionLabel.text = aCharacter.shortDescription;
+        return newOrderCell;
+        
+    } else if ([aCharacter.affiliation isEqualToString:@"Galactic Empire"]) {
+        EmpireTableViewCell *empireCell = (EmpireTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"EmpireCell" forIndexPath:indexPath];
+        empireCell.nameLabel.text = aCharacter.name;
+        empireCell.descriptionLabel.text = aCharacter.shortDescription;
+        return empireCell;
+        
+    } else if ([aCharacter.affiliation isEqualToString:@"Bounty Hunter"]) {
+        BountyHunterTableViewCell *bountyHunterCell = (BountyHunterTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"BountyHunterCell" forIndexPath:indexPath];
+        bountyHunterCell.nameLabel.text = aCharacter.name;
+        bountyHunterCell.descriptionLabel.text = aCharacter.shortDescription;
+        return bountyHunterCell;
+    }
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DefaultCell" forIndexPath:indexPath];
     cell.textLabel.text = aCharacter.name;
+    cell.detailTextLabel.text = aCharacter.shortDescription;
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 65.0;
 }
 
 /*
