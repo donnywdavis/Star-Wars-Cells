@@ -7,10 +7,13 @@
 //
 
 #import "CharactersTableViewController.h"
+#import "Character.h"
 
 @interface CharactersTableViewController ()
 
 @property (strong, nonatomic) NSMutableArray *characters;
+
+- (void)loadCharacters;
 
 @end
 
@@ -19,12 +22,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.characters = [[NSMutableArray alloc] init];
+    [self loadCharacters];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Load data
+
+- (void)loadCharacters {
+    // Let's load our data from our handy dandy json file
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"characters" ofType:@"json"];
+    NSArray *charactersArray = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:filePath] options:NSJSONReadingAllowFragments error:nil];
+    
+    // Loop through the array to create Character objects and store in our array
+    for (NSDictionary *character in charactersArray) {
+        [self.characters addObject:[Character characterWithDictionary:character]];
+    }
+    
+    if (charactersArray) {
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+        self.characters = [[self.characters sortedArrayUsingDescriptors:@[sortDescriptor]] mutableCopy];
+        
+        [self.tableView reloadData];
+    }
 }
 
 #pragma mark - Table view data source
@@ -37,15 +61,14 @@
     return self.characters.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CharacterCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    Character *aCharacter = self.characters[indexPath.row];
+    cell.textLabel.text = aCharacter.name;
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
