@@ -13,6 +13,7 @@
 		41AD7D301CDA7DB9008E5D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41AD7D2F1CDA7DB9008E5D3E /* Assets.xcassets */; };
 		41AD7D331CDA7DB9008E5D3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AD7D311CDA7DB9008E5D3E /* LaunchScreen.storyboard */; };
 		41AD7D3B1CDA841A008E5D3E /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 41AD7D3A1CDA841A008E5D3E /* characters.json */; };
+		41AD7D3E1CDA90D5008E5D3E /* CharactersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AD7D3D1CDA90D5008E5D3E /* CharactersTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,8 @@
 		41AD7D321CDA7DB9008E5D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41AD7D341CDA7DB9008E5D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41AD7D3A1CDA841A008E5D3E /* characters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
+		41AD7D3C1CDA90D5008E5D3E /* CharactersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharactersTableViewController.h; sourceTree = "<group>"; };
+		41AD7D3D1CDA90D5008E5D3E /* CharactersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharactersTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 				41AD7D3A1CDA841A008E5D3E /* characters.json */,
 				41AD7D261CDA7DB9008E5D3E /* AppDelegate.h */,
 				41AD7D271CDA7DB9008E5D3E /* AppDelegate.m */,
+				41AD7D3C1CDA90D5008E5D3E /* CharactersTableViewController.h */,
+				41AD7D3D1CDA90D5008E5D3E /* CharactersTableViewController.m */,
 				41AD7D2C1CDA7DB9008E5D3E /* Main.storyboard */,
 				41AD7D2F1CDA7DB9008E5D3E /* Assets.xcassets */,
 				41AD7D311CDA7DB9008E5D3E /* LaunchScreen.storyboard */,
@@ -149,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41AD7D3E1CDA90D5008E5D3E /* CharactersTableViewController.m in Sources */,
 				41AD7D281CDA7DB9008E5D3E /* AppDelegate.m in Sources */,
 				41AD7D251CDA7DB9008E5D3E /* main.m in Sources */,
 			);

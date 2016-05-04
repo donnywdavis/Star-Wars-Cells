@@ -8,7 +8,7 @@
         <!--Star Wars Characters-->
         <scene sceneID="4FE-BF-emh">
             <objects>
-                <tableViewController id="XE1-ie-MER" sceneMemberID="viewController">
+                <tableViewController id="XE1-ie-MER" customClass="CharactersTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gF1-df-bCC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
