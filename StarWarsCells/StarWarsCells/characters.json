@@ -1,0 +1,100 @@
+[
+ {
+    "name": "BB-8",
+    "description": "Fancy spinning droid that belongs to Poe Dameron.",
+    "species": "Droid",
+    "affiliation": "Resistance",
+    "image": ""
+ },
+ {
+    "name": "Poe Dameron",
+    "description": "Owner of BB-8. Also flys things.",
+    "species": "Human",
+    "affiliation": "Restinance",
+    "image": ""
+ },
+ {
+    "name": "Han Solo",
+    "description": "Smuggler of fine antiquities.",
+    "species": "Human",
+    "affiliation": "Resistance",
+    "image": ""
+ },
+ {
+    "name": "Leia Organa/Skywalker/Solo",
+    "description": "Wife to Han, sister to Luke. She also runs things.",
+    "species": "Human",
+    "affiliation": "Resistance",
+    "image": ""
+ },
+ {
+    "name": "Finn",
+    "description": "Janitor that likes to play with lightsabers.",
+    "species": "Human",
+    "affiliation": "Resistance",
+    "image": ""
+ },
+ {
+    "name": "Rey",
+    "description": "Scavenger with force powers. Apparently somebody importants daughter.",
+    "species": "Human",
+    "affiliation": "Resistance",
+    "image": ""
+ },
+ {
+    "name": "Luke Skywalker",
+    "description": "Jedi and reigning hide and go seek champion.",
+    "species": "Human",
+    "affiliation": "Jedi Order",
+    "image": ""
+ },
+ {
+    "name": "Darth Vader",
+    "description": "Angry dad that ruined it for everybody.",
+    "species": "Human",
+    "affiliation": "Galactic Empire",
+    "image": ""
+ },
+ {
+    "name": "Emperor",
+    "description": "Bad jedi dude with a power complex.",
+    "species": "Human",
+    "affiliation": "Galactic Empire",
+    "image": ""
+ },
+ {
+    "name": "Kylo Ren",
+    "description": "Troubled young man with bad temper tamptrums for not being picked in the jedi soccer league.",
+    "species": "Human",
+    "affiliation": "New Order",
+    "image": ""
+ },
+ {
+    "name": "Captain Phasma",
+    "description": "Head stormtrooper and all chromed out like an episode of Pimp My Ride.",
+    "species": "Human",
+    "affiliation": "New Order",
+    "image": ""
+ },
+ {
+    "name": "R2-D2",
+    "description": "Quirky little droid with a knack for getting into trouble.",
+    "species": "Droid",
+    "affiliation": "Resistance",
+    "image": ""
+ },
+ {
+    "name": "Boba Fett",
+    "description": "Intimidating with his armor and wears a jet pack.",
+    "species": "Human",
+    "affiliation": "Bounty Hunter",
+    "image": ""
+ },
+ {
+    "name": "IG-88",
+    "description": "Droid that likes to use guns.",
+    "species": "Droid",
+    "affiliation": "Bounty Hunter",
+    "image": ""
+ },
+]
