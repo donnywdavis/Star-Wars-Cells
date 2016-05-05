@@ -17,6 +17,7 @@
 @interface CharactersTableViewController ()
 
 @property (strong, nonatomic) NSMutableArray *characters;
+@property (strong, nonatomic) NSMutableArray *sectionsArray;
 @property (strong, nonatomic) NSMutableArray *affiliations;
 
 - (void)loadCharacters;
@@ -29,7 +30,9 @@
     [super viewDidLoad];
     
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    
     self.characters = [[NSMutableArray alloc] init];
+    self.sectionsArray = [[NSMutableArray alloc] init];
     self.affiliations = [[NSMutableArray alloc] init];
     [self loadCharacters];
 }
@@ -56,10 +59,22 @@
         NSSortDescriptor *nameSort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
         self.characters = [[self.characters sortedArrayUsingDescriptors:@[affiliationSort, nameSort]] mutableCopy];
         
+        NSMutableArray *placeholderArray = nil;
         for (Character *character in self.characters) {
             if (![self.affiliations containsObject:character.affiliation]) {
                 [self.affiliations addObject:character.affiliation];
+                if (placeholderArray != nil) {
+                    NSDictionary *charactersDictionary = [NSDictionary dictionaryWithObject:placeholderArray forKey:@"data"];
+                    [self.sectionsArray addObject:charactersDictionary];
+                    placeholderArray = nil;
+                }
+                placeholderArray = [[NSMutableArray alloc] init];
             }
+            [placeholderArray addObject:character];
+        }
+        if (placeholderArray != nil) {
+            NSDictionary *charactersDictionary = [NSDictionary dictionaryWithObject:placeholderArray forKey:@"data"];
+            [self.sectionsArray addObject:charactersDictionary];
         }
         
         [self.tableView reloadData];
@@ -73,48 +88,39 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    int count = 0;
-    
-    for (Character *character in self.characters) {
-        if ([character.affiliation isEqualToString:self.affiliations[section]]) {
-            count += 1;
-        }
-    }
-    
-    return count;
+    NSDictionary *charactersDictionary = [self.sectionsArray objectAtIndex:section];
+    NSArray *charactersArray = [charactersDictionary objectForKey:@"data"];
+    return charactersArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    Character *aCharacter = self.characters[indexPath.row];
+    NSDictionary *charactersDictionary = self.sectionsArray[indexPath.section];
+    NSArray *charactersArray = [charactersDictionary objectForKey:@"data"];
+    Character *aCharacter = charactersArray[indexPath.row];
     
     if ([aCharacter.affiliation isEqualToString:@"Resistance"]) {
         ResistanceTableViewCell *resistanceCell = (ResistanceTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"ResistanceCell" forIndexPath:indexPath];
-        resistanceCell.nameLabel.text = aCharacter.name;
-        resistanceCell.descriptionLabel.text = aCharacter.shortDescription;
+        [resistanceCell configureCell:aCharacter];
         return resistanceCell;
         
     } else if ([aCharacter.affiliation isEqualToString:@"Jedi Order"]) {
         JediTableViewCell *jediCell = (JediTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"JediCell" forIndexPath:indexPath];
-        jediCell.nameLabel.text = aCharacter.name;
-        jediCell.descriptionLabel.text = aCharacter.shortDescription;
+        [jediCell configureCell:aCharacter];
         return jediCell;
         
     } else if ([aCharacter.affiliation isEqualToString:@"New Order"]) {
         NewOrderTableViewCell *newOrderCell = (NewOrderTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"NewOrderCell" forIndexPath:indexPath];
-        newOrderCell.nameLabel.text = aCharacter.name;
-        newOrderCell.descriptionLabel.text = aCharacter.shortDescription;
+        [newOrderCell configureCell:aCharacter];
         return newOrderCell;
         
     } else if ([aCharacter.affiliation isEqualToString:@"Galactic Empire"]) {
         EmpireTableViewCell *empireCell = (EmpireTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"EmpireCell" forIndexPath:indexPath];
-        empireCell.nameLabel.text = aCharacter.name;
-        empireCell.descriptionLabel.text = aCharacter.shortDescription;
+        [empireCell configureCell:aCharacter];
         return empireCell;
         
     } else if ([aCharacter.affiliation isEqualToString:@"Bounty Hunter"]) {
         BountyHunterTableViewCell *bountyHunterCell = (BountyHunterTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"BountyHunterCell" forIndexPath:indexPath];
-        bountyHunterCell.nameLabel.text = aCharacter.name;
-        bountyHunterCell.descriptionLabel.text = aCharacter.shortDescription;
+        [bountyHunterCell configureCell:aCharacter];
         return bountyHunterCell;
     }
     

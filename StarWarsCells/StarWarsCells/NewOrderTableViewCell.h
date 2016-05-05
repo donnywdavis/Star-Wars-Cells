@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Character.h"
 
 @interface NewOrderTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+
+- (void)configureCell:(Character *)character;
 
 @end

@@ -22,4 +22,10 @@
     // Configure the view for the selected state
 }
 
+- (void)configureCell:(Character *)character {
+    self.nameLabel.text = character.name;
+    self.descriptionLabel.text = character.shortDescription;
+    self.profileImage.image = [UIImage imageNamed:character.image];
+}
+
 @end
