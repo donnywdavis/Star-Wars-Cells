@@ -111,40 +111,8 @@
                                     <outlet property="nameLabel" destination="IMf-Qf-anF" id="kxQ-Vc-mAv"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EmpireCell" rowHeight="55" id="cOY-nv-9X5" customClass="EmpireTableViewCell">
-                                <rect key="frame" x="0.0" y="257" width="600" height="55"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cOY-nv-9X5" id="URx-YL-fgo">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="54.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kic-RK-mWR">
-                                            <rect key="frame" x="551.5" y="8" width="40.5" height="18"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3r-il-Ouy">
-                                            <rect key="frame" x="536.5" y="34.5" width="55.5" height="12"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="kic-RK-mWR" secondAttribute="trailing" id="3jv-qz-GDi"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="G3r-il-Ouy" secondAttribute="trailing" id="ZkC-MW-cVh"/>
-                                        <constraint firstItem="kic-RK-mWR" firstAttribute="top" secondItem="URx-YL-fgo" secondAttribute="topMargin" id="r6S-mW-Az4"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="G3r-il-Ouy" secondAttribute="bottom" id="yte-Ic-clt"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="descriptionLabel" destination="G3r-il-Ouy" id="CEA-yr-Ixl"/>
-                                    <outlet property="nameLabel" destination="kic-RK-mWR" id="Xvb-Vp-fNp"/>
-                                </connections>
-                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="BountyHunterCell" rowHeight="55" id="4fd-jw-gvO" customClass="BountyHunterTableViewCell">
-                                <rect key="frame" x="0.0" y="312" width="600" height="55"/>
+                                <rect key="frame" x="0.0" y="257" width="600" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4fd-jw-gvO" id="8uo-1d-dpZ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="54.5"/>
@@ -173,6 +141,38 @@
                                 <connections>
                                     <outlet property="descriptionLabel" destination="zCG-iM-iKX" id="Sov-14-MkS"/>
                                     <outlet property="nameLabel" destination="Are-Vr-AQ7" id="Njb-NL-xmj"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EmpireCell" rowHeight="55" id="cOY-nv-9X5" customClass="EmpireTableViewCell">
+                                <rect key="frame" x="0.0" y="312" width="600" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cOY-nv-9X5" id="URx-YL-fgo">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="54.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kic-RK-mWR">
+                                            <rect key="frame" x="551.5" y="8" width="40.5" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3r-il-Ouy">
+                                            <rect key="frame" x="536.5" y="34.5" width="55.5" height="12"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="kic-RK-mWR" secondAttribute="trailing" id="3jv-qz-GDi"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="G3r-il-Ouy" secondAttribute="trailing" id="ZkC-MW-cVh"/>
+                                        <constraint firstItem="kic-RK-mWR" firstAttribute="top" secondItem="URx-YL-fgo" secondAttribute="topMargin" id="r6S-mW-Az4"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="G3r-il-Ouy" secondAttribute="bottom" id="yte-Ic-clt"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="G3r-il-Ouy" id="CEA-yr-Ixl"/>
+                                    <outlet property="nameLabel" destination="kic-RK-mWR" id="Xvb-Vp-fNp"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DefaultCell" textLabel="cDc-ZT-bP4" rowHeight="55" style="IBUITableViewCellStyleDefault" id="Hvx-pK-5nI">
@@ -207,7 +207,7 @@
         <!--Navigation Controller-->
         <scene sceneID="j8i-ld-r3Z">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="uHK-xu-9Hv" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uHK-xu-9Hv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TI1-iU-0Tk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

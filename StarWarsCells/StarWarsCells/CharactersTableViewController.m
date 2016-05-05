@@ -17,6 +17,7 @@
 @interface CharactersTableViewController ()
 
 @property (strong, nonatomic) NSMutableArray *characters;
+@property (strong, nonatomic) NSMutableArray *affiliations;
 
 - (void)loadCharacters;
 
@@ -27,7 +28,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     self.characters = [[NSMutableArray alloc] init];
+    self.affiliations = [[NSMutableArray alloc] init];
     [self loadCharacters];
 }
 
@@ -49,8 +52,15 @@
     }
     
     if (charactersArray) {
-        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-        self.characters = [[self.characters sortedArrayUsingDescriptors:@[sortDescriptor]] mutableCopy];
+        NSSortDescriptor *affiliationSort = [[NSSortDescriptor alloc] initWithKey:@"affiliation" ascending:YES];
+        NSSortDescriptor *nameSort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+        self.characters = [[self.characters sortedArrayUsingDescriptors:@[affiliationSort, nameSort]] mutableCopy];
+        
+        for (Character *character in self.characters) {
+            if (![self.affiliations containsObject:character.affiliation]) {
+                [self.affiliations addObject:character.affiliation];
+            }
+        }
         
         [self.tableView reloadData];
     }
@@ -59,11 +69,19 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return self.affiliations.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.characters.count;
+    int count = 0;
+    
+    for (Character *character in self.characters) {
+        if ([character.affiliation isEqualToString:self.affiliations[section]]) {
+            count += 1;
+        }
+    }
+    
+    return count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -108,7 +126,11 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 65.0;
+    return 55.0;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return self.affiliations[section];
 }
 
 /*
