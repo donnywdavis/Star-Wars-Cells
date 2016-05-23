@@ -21,6 +21,7 @@
 @property (strong, nonatomic) NSMutableArray *affiliations;
 
 - (void)loadCharacters;
+- (void)animateTable;
 
 @end
 
@@ -35,12 +36,29 @@
     self.sectionsArray = [[NSMutableArray alloc] init];
     self.affiliations = [[NSMutableArray alloc] init];
     [self loadCharacters];
+    [self animateTable];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)animateTable {
+    NSArray *cells = self.tableView.visibleCells;
+    CGFloat tableHeight = self.tableView.bounds.size.height;
+    for (UITableViewCell *cell in cells) {
+        cell.transform = CGAffineTransformMakeTranslation(0, tableHeight);
+    }
+    int index = 0;
+    for (UITableViewCell *cell in cells) {
+        [UIView animateWithDuration:1.5 delay:(0.05 * (double)index) usingSpringWithDamping:0.8 initialSpringVelocity:0 options:UIViewAnimationOptionAllowAnimatedContent animations:^{
+            cell.transform = CGAffineTransformMakeTranslation(0, 0);
+        } completion:nil];
+        index += 1;
+    }
+}
+
 
 #pragma mark - Load data
 
